@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search Events - CityCare</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/assets/placeholder.jpg" alt="logo" class="logo">
+        <div>
+          <h1>CityCare Events</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/search.html">Search Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container search-page">
+    <section class="search-panel card">
+      <h2>Find Events</h2>
+      <form id="search-form">
+        <div class="form-row">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="form-row">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="City, venue or area">
+        </div>
+        <div class="form-row">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="">Any</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button">Search</button>
+          <button type="button" id="clear" class="button muted">Clear Filters</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results card">
+      <h2>Results</h2>
+      <div id="results" class="grid"></div>
+      <div id="no-results" class="no-results" hidden>No events found. Try adjusting filters.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 CityCare Foundation</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const dateInput = document.querySelector('#date');
+    if (dateInput) {
+      try { dateInput.type = 'date'; } catch (e) {}
+      dateInput.addEventListener('focus', () => { try { dateInput.type = 'date'; } catch (e) {} });
+      dateInput.addEventListener('click', () => { try { dateInput.type = 'date'; } catch (e) {} });
+    }
+    const sel = document.getElementById('category');
+    if (sel) {
+      setTimeout(() => {
+        sel.style.background = '#ffffff';
+        sel.style.color = '#0b1220';
+      }, 120);
+    }
+  })();
+  </script>
+
+  <script src="/js/search.js"></script>
+</body>
+</html>

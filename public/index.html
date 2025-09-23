@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>City Charity Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/assets/placeholder.jpg" alt="logo" class="logo">
+        <div>
+          <h1>CityCare Events</h1>
+          <p class="tagline">Connecting people for better communities</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/search.html">Search Events</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h2>Discover local charity events. Give time, give hope.</h2>
+        <p>Find fundraising runs, galas, concerts and workshops near you.</p>
+        <a href="/search.html" class="button">Search Events</a>
+      </div>
+      <div class="hero-illustration"></div>
+    </section>
+
+    <section id="upcoming" class="card-grid">
+      <h3>Upcoming Events</h3>
+      <div id="upcoming-list" class="grid"></div>
+    </section>
+
+    <section id="popular" class="card-grid">
+      <h3>Trending & Popular</h3>
+      <div id="popular-list" class="grid"></div>
+    </section>
+
+    <section id="about" class="info">
+      <h3>About CityCare</h3>
+      <p>CityCare Foundation partners with local organisations to support education, health and environment initiatives.</p>
+    </section>
+
+    <section id="contact" class="info">
+      <h3>Contact</h3>
+      <p>Email: info@citycare.org | Phone: (02) 1234 5678</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 CityCare Foundation — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
